@@ -44,7 +44,7 @@
             "properties": {}
         },
         {
-            "apiVersion": "2016-03-30",
+            "apiVersion": "2023-06-01",
             "type": "Microsoft.Network/publicIPAddresses",
             "name": "csr-pip",
             "location": "[resourceGroup().location]",
@@ -53,6 +53,10 @@
                 "dnsSettings": {
                     "domainNameLabel": "[concat('csr-', uniqueString(resourceGroup().id))]"
                 }
+            },
+            "sku":{
+                "name": "Standard",
+                "tier": "Regional"
             }
         },
         {
