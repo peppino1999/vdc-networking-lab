@@ -34,7 +34,7 @@
         {
             "comments": "Create a VPN gateway",
             "type": "Microsoft.Network/virtualNetworkGateways",
-            "apiVersion": "2017-10-01",
+            "apiVersion": "2023-06-01",
             "name": "[parameters('vpnGwName')]",
             "location": "[resourceGroup().location]",
             "dependsOn": [
