@@ -202,10 +202,6 @@
             "dependsOn": [
                 "[concat('Deploy-Spoke', copyIndex(1), '-vNet')]"
             ],
-            "copy": {
-                "name": "spokes",
-                "count": "[length(variables('spokes'))]"
-            },
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
