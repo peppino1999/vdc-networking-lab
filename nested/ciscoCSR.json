@@ -173,7 +173,7 @@
             ],
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_D2_V2"
+                    "vmSize": "Standard_D2_V4"
                 },
                 "osProfile": {
                     "computerName": "csr",
