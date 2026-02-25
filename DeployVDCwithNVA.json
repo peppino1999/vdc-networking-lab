@@ -194,29 +194,54 @@
             ]
         },
         {
-            "comments": "Create two VMs in an availability set with load balancing into first subnet in each spoke",
+            "comments": "Create single VM in Spoke1",
+            "name": "Spoke1-VM",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2017-05-10",
-            "resourceGroup": "[variables('spokes')[copyIndex()].resourceGroup]",
+            "resourceGroup": "VDC-Spoke1",
             "dependsOn": [
-                "[concat('Deploy-Spoke', copyIndex(1), '-vNet')]"
+                "Deploy-Spoke1-vNet"
             ],
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('avsetUri')]",
+                    "uri": "[variables('vmUri')]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
-                    "vNetName": {
-                        "value": "[variables('spokes')[copyIndex()].vnet.name]"
-                    },
-                    "subnetName": {
-                        "value": "[variables('spokes')[copyIndex()].subnets[0].name]"
-                    },
-                    "prefix": {
-                        "value": "[concat('Spoke', copyIndex(1))]"
-                    }
+                    "vNetName": { "value": "Spoke1-vnet" },
+                    "subnetName": { "value": "Spoke1-vnet-subnet1" },
+                    "vmName": { "value": "Spoke1-VM" },
+                    "script": { "value": "" },
+                    "pip?": { "value": false },
+                    "avsetName": { "value": "" },
+                    "lbName": { "value": "" }
+                }
+            }
+        },
+        {
+            "comments": "Create single VM in Spoke2",
+            "name": "Spoke2-VM",
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2017-05-10",
+            "resourceGroup": "VDC-Spoke2",
+            "dependsOn": [
+                "Deploy-Spoke2-vNet"
+            ],
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "[variables('vmUri')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters": {
+                    "vNetName": { "value": "Spoke2-vnet" },
+                    "subnetName": { "value": "Spoke2-vnet-subnet1" },
+                    "vmName": { "value": "Spoke2-VM" },
+                    "script": { "value": "" },
+                    "pip?": { "value": false },
+                    "avsetName": { "value": "" },
+                    "lbName": { "value": "" }
                 }
             }
         },
