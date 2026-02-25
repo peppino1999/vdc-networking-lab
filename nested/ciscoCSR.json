@@ -49,7 +49,7 @@
             "name": "csr-pip",
             "location": "[resourceGroup().location]",
             "properties": {
-                "publicIPAllocationMethod": "Dynamic",
+                "publicIPAllocationMethod": "Static",
                 "dnsSettings": {
                     "domainNameLabel": "[concat('csr-', uniqueString(resourceGroup().id))]"
                 }
