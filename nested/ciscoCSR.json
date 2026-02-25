@@ -183,8 +183,8 @@
                 "storageProfile": {
                     "imageReference": {
                         "publisher": "cisco",
-                        "offer": "cisco-csr-1000v",
-                        "sku": "16_6",
+                        "offer": "cisco-c8000v-byol",
+                        "sku": "17_09_04a-byol",
                         "version": "latest"
                     },
                     "osDisk": {
