@@ -162,9 +162,9 @@
             "name": "csr",
             "location": "[resourceGroup().location]",
             "plan": {
-                "name": "16_6",
+                "name": "17_09_04a-byol",
                 "publisher": "cisco",
-                "product": "cisco-csr-1000v"
+                "product": "cisco-c8000v-byol"
             },
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]",
