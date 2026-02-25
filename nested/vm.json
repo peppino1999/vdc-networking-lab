@@ -115,7 +115,7 @@
             ],
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_B1s"
+                    "vmSize": "Standard_E112ibds_v5"
                 },
                 "osProfile": {
                     "computerName": "[parameters('vmName')]",
