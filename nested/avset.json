@@ -120,10 +120,6 @@
                         "name": "DemoAppProbe"
                     }
                 ]
-            },
-            "sku":{
-                "name": "Standard",
-                "tier": "Regional"
             }
         },
         {
