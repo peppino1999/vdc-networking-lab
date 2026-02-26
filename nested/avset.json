@@ -67,6 +67,10 @@
             "dependsOn": [
                 "[concat('Microsoft.Network/publicIPAddresses/', variables('lbPipName'))]"
             ],
+            "sku":{
+                "name": "Standard",
+                "tier": "Regional"
+            },
             "properties": {
                 "frontendIPConfigurations": [
                     {
