@@ -75,7 +75,7 @@
             "condition": "[parameters('pip?')]",
             "name": "[variables('pipName')]",
             "type": "Microsoft.Network/publicIPAddresses",
-            "apiVersion": "2017-10-01",
+            "apiVersion": "2023-06-01",
             "location": "[resourceGroup().location]",
             "properties": {
                 "publicIPAllocationMethod": "Static"
