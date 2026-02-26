@@ -27,7 +27,7 @@
         }
     },
     "variables": {
-        "baseUri": "https://raw.githubusercontent.com/azurecitadel/vdc-networking-lab/master",
+        "baseUri": "https://raw.githubusercontent.com/peppino1999/vdc-networking-lab/master",
         "vnetUri": "[concat(variables('baseUri'), '/nested/vnet.json')]",
         "avsetUri": "[concat(variables('baseUri'), '/nested/avset.json')]"
     },
